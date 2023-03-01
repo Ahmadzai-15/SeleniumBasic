@@ -7,7 +7,7 @@ public class LunchApplication {
     public static void main(String[] args) {
         //Open the browser
 
-    System.setProperty("webdriver.chrome.driver","C:\\Users\\pakti\\IdeaProjects\\LearningSeleniumBasic\\Drivers\\chromedriver.exe");
-    WebDriver driver=new ChromeDriver();
+       System.setProperty("webdriver.chrome.driver","C:\\Users\\pakti\\IdeaProjects\\LearningSeleniumBasic\\Drivers\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
     }
 }
