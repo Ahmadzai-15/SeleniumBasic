@@ -1,0 +1,40 @@
+
+
+XPath:  1-Absolute Xpath    2-Relative XPath
+
+Absolute Xpath:
+[/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input]
+its PATH might be change while upgrading software. and Absolute start from single foreword slash /
+
+Relative XPath [Custom XPath]
+
+Simple of HTML CODE:
+(<input id="userId" class="selectors-input jsSelector" title="Email" spellcheck="false" autocomplete="anyrandomstring" name="email" value="" placeholder="Enter email" type="email" onfocus="if (this.hasAttribute('readonly')) {
+     this.removeAttribute('readonly');
+     // fix for mobile safari to show virtual keyboard
+     this.blur();this.focus();}">)
+
+
+1-      //tagName[@attributeName='value']
+Ex:     //tagName[@id='userid']
+
+2-      //tagName[text()='Inner Text']    Ex: <h3>Useful Links for learning</h3>
+Ex:     //h3[contains(text(),'Useful Links for learning')] if there is no attribute so we can use like this.
+
+3-      //tagNme[contains(@attribute,'value')]
+Ex:     //input[contains(@title,'Email')]
+
+4-      //tagNme[contains(text(),'inner text')]  //it not much unique prefer to use contains as #3
+Ex:     //input[contains(placeholder,'enter email')]
+
+
+Notes:   Multiple XPath: we can use it with (and, or)
+Ex:     //tagName[@id='userid' and @title='email']
+Ex:     //tagName[@id='userid' or @title='email']
+Ex:     (//tagName[@id='userid' or @title='email'])[1]  or sometime with index but this method also not recommends too.
+
+
+
+
+Note:
+find Link element by any name:       //a[starts-with(text(),'Amazon')]
